@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15sp"
+    android:orientation="vertical"
+    tools:context=".Add_Patient_Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginTop="27dp"
+        android:text="@string/fill_out" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/first_name"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:hint="aaa" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/last_name"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/PatientAddr"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gender"
+            android:textColor="#000000"/>
+
+        <RadioGroup
+            android:id="@+id/patientSex"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/patientMale"
+                android:text="M"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"/>
+            <RadioButton
+                android:id="@+id/patientFemale"
+                android:text="F"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/birth_date"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/showMyDate"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/department"
+            android:textColor="#000000"/>
+
+        <Spinner
+            android:id="@+id/DepartDropDown"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="@string/related_doctor"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/patientDoc"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submitPatient"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:onClick="submitPatient"
+        android:text="@string/submitPatient"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

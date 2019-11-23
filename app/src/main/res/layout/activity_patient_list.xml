@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PatientListActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/web_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="5">
+
+
+        <Button
+            android:id="@+id/btnGet"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:onClick="onClickGetPatients"
+            android:layout_weight="2"
+            android:text="@string/get_patients" />
+
+        <ImageView
+            android:id="@+id/addPatient"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:onClick="AddonClick"
+            app:srcCompat="@drawable/plus" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listViewPatient"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="InvalidId" />
+
+</LinearLayout>
